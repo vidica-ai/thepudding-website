@@ -304,7 +304,7 @@ const translations = {
             subtitle1: 'Sabores Artesanais',
             subtitle2: 'Pudins Decorativos',
             decorativeIntro: 'Perfeitos para tornar seus eventos ainda mais especiais',
-            note: 'Tamanhos disponíveis: Individual (150g) • Médio (600g) • Grande (1.2kg)',
+            note: 'Tamanhos disponíveis: Individual (120g) • Grande (1kg)',
             items: {
                 tradicional: {
                     name: 'Tradicional',
@@ -396,7 +396,7 @@ const translations = {
             subtitle1: 'Artisanal Flavors',
             subtitle2: 'Decorative Puddings',
             decorativeIntro: 'Perfect to make your events even more special',
-            note: 'Available sizes: Individual (150g) • Medium (600g) • Large (1.2kg)',
+            note: 'Available sizes: Individual (120g) • Large (1kg)',
             items: {
                 tradicional: {
                     name: 'Traditional',
