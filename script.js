@@ -308,27 +308,33 @@ const translations = {
             items: {
                 tradicional: {
                     name: 'Tradicional',
-                    desc: 'Receita original da casa com calda de caramelo perfeita'
+                    desc: 'Receita original da casa com calda de caramelo perfeita',
+                    badge: 'Clássico'
                 },
                 brigadeiro: {
                     name: 'Brigadeiro',
-                    desc: 'Cobertura de chocolate e granulado artesanal'
+                    desc: 'Cobertura de chocolate e granulado artesanal',
+                    badge: 'Favorito'
                 },
                 cafe: {
                     name: 'Café',
-                    desc: 'Infusão de café especial com toque de chocolate'
+                    desc: 'Infusão de café especial com toque de chocolate',
+                    badge: 'Premium'
                 },
                 romeuJulieta: {
                     name: 'Romeu e Julieta',
-                    desc: 'Queijo cremoso com calda de goiabada artesanal'
+                    desc: 'Queijo cremoso com calda de goiabada artesanal',
+                    badge: 'Especial'
                 },
                 frutasVermelhas: {
                     name: 'Frutas Vermelhas',
-                    desc: 'Coberto com mix de berries frescos e calda especial'
+                    desc: 'Coberto com mix de berries frescos e calda especial',
+                    badge: 'Sazonal'
                 },
                 cocada: {
                     name: 'Cocada',
-                    desc: 'Coco ralado fresco com toque caramelizado'
+                    desc: 'Coco ralado fresco com toque caramelizado',
+                    badge: 'Tropical'
                 }
             },
             decorativeItems: {
@@ -400,27 +406,33 @@ const translations = {
             items: {
                 tradicional: {
                     name: 'Traditional',
-                    desc: 'Our signature recipe with perfect caramel sauce'
+                    desc: 'Our signature recipe with perfect caramel sauce',
+                    badge: 'Classic'
                 },
                 brigadeiro: {
                     name: 'Brigadeiro',
-                    desc: 'Chocolate topping with artisanal sprinkles'
+                    desc: 'Chocolate topping with artisanal sprinkles',
+                    badge: 'Favorite'
                 },
                 cafe: {
                     name: 'Coffee',
-                    desc: 'Special coffee infusion with a touch of chocolate'
+                    desc: 'Special coffee infusion with a touch of chocolate',
+                    badge: 'Premium'
                 },
                 romeuJulieta: {
                     name: 'Romeo & Juliet',
-                    desc: 'Creamy cheese with artisanal guava sauce'
+                    desc: 'Creamy cheese with artisanal guava sauce',
+                    badge: 'Special'
                 },
                 frutasVermelhas: {
                     name: 'Red Berries',
-                    desc: 'Topped with fresh berry mix and special sauce'
+                    desc: 'Topped with fresh berry mix and special sauce',
+                    badge: 'Seasonal'
                 },
                 cocada: {
                     name: 'Coconut',
-                    desc: 'Fresh grated coconut with caramelized touch'
+                    desc: 'Fresh grated coconut with caramelized touch',
+                    badge: 'Tropical'
                 }
             },
             decorativeItems: {
@@ -548,8 +560,10 @@ function updateLanguage(lang) {
         if (menuItemData[index]) {
             const h4 = item.querySelector('.menu-content h4');
             const desc = item.querySelector('.menu-description');
+            const badge = item.querySelector('.menu-badge');
             if (h4) h4.textContent = menuItemData[index].name;
             if (desc) desc.textContent = menuItemData[index].desc;
+            if (badge && menuItemData[index].badge) badge.textContent = menuItemData[index].badge;
         }
     });
     
@@ -577,11 +591,14 @@ function updateLanguage(lang) {
     document.querySelector('.order-button span').textContent = t.orderBtn;
 }
 
-// Add page load animation
+// Add page load animation and set default language to English
 document.addEventListener('DOMContentLoaded', () => {
     document.body.style.opacity = '0';
     setTimeout(() => {
         document.body.style.transition = 'opacity 1s ease';
         document.body.style.opacity = '1';
     }, 100);
+    
+    // Set default language to English
+    updateLanguage('en');
 });
