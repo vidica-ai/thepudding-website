@@ -199,6 +199,7 @@ body {
 .hero-logo img {
     height: 120px;
     width: auto;
+    max-width: 100%;
 }
 
 @keyframes fadeInUp {
@@ -915,11 +916,28 @@ section {
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .hero-logo img {
+        height: 80px;
+        max-width: 90%;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .hero-image {
-        max-width: 400px;
+        max-width: 300px;
         margin: 0 auto;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: auto;
     }
 
     .about-grid,
@@ -934,5 +952,28 @@ section {
 
     .gallery-item.tall {
         grid-row: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-logo img {
+        height: 60px;
+        max-width: 95%;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-image {
+        max-width: 250px;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 6vw, 2.5rem);
     }
 }
